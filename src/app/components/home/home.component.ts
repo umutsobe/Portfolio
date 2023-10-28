@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-    <div style="height: 90vh !important; background-color: #072541; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+    <div style="height: 90vh !important; background-color: #072541;">
       <div class="h-75 d-flex justify-content-center align-items-center ">
         <div class="typewriter mx-auto">
           <h1>Hello. I'm Umut Sobe. Welcome!</h1>
