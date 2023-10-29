@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <div class="p-2" style="height: 99vh !important; background-color: #090f21;">
       <div class="h-75 d-flex flex-column justify-content-center align-items-center ">
         <div class="typewriter mx-auto">
-          <div class="welcome-text user-select-none text-white">Hello. I'm Umut Sobe. Welcome!</div>
+          <p class="welcome-text" id="demo"></p>
         </div>
         <div class="p-3 rounded-3" style="margin-top: 120px;">
           <div class="p-2">
@@ -33,34 +33,12 @@ import { Component } from '@angular/core';
   styles: [
     `
       .welcome-text {
-        overflow: hidden;
-        font-size: 25px;
-        font-weight: 500;
-        border-right: 0.15em solid orange;
+        color: white;
+        font-size: 28px;
+        font-weight: 600;
         white-space: nowrap;
         margin: 0 auto;
         letter-spacing: 0.15em;
-        animation: typing 3.5s steps(20, end), blink-caret 0.5s step-end infinite;
-      }
-
-      /* The typing effect */
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
-      }
-
-      @keyframes blink-caret {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: orange;
-        }
       }
       @media (max-width: 600px) {
         .welcome-text {
@@ -77,4 +55,26 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  txt = "Hello. I'm Umut Sobe. Welcome!";
+  speed = 70;
+  i = 0;
+  timerId: any;
+
+  ngOnInit() {
+    this.startAnimation();
+  }
+
+  typeWriter() {
+    if (this.i < this.txt.length) {
+      document.getElementById('demo').innerHTML += this.txt.charAt(this.i);
+      this.i++;
+      this.timerId = setTimeout(() => this.typeWriter(), this.speed);
+    }
+  }
+
+  startAnimation() {
+    if (this.timerId) return;
+    this.typeWriter();
+  }
+}

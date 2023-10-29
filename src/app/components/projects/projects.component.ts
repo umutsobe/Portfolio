@@ -64,7 +64,7 @@ import { Component } from '@angular/core';
         </div>
         <div class="col-12 col-md-12 col-lg-4">
           <div class="d-flex flex-column align-items-center">
-            <h4 class="text-white border-bottom mb-5">Small and Medium Sized Projects</h4>
+            <h4 class="text-white border-bottom mb-5 mt-5 mt-lg-0">Small and Medium Sized Projects</h4>
             <div class="d-flex flex-column justify-content-center mb-4">
               <h5 class="text-white text-center my-2">Music Player</h5>
               <div class="d-flex justify-content-between align-items-center">
@@ -103,10 +103,16 @@ import { Component } from '@angular/core';
           width: 350px !important;
         }
         .large {
-          border: 0 !important;
+          border-right: 0 !important;
         }
         ul {
           width: 100%;
+        }
+      }
+      @media (max-width: 1000px) {
+        .large {
+          border-bottom: 1px solid white;
+          border-right: 0 !important;
         }
       }
       @media (max-width: 400px) {
@@ -119,7 +125,7 @@ import { Component } from '@angular/core';
           width: 200px !important;
         }
       }
-      @media (max-width: 400px) {
+      @media (max-width: 200px) {
         .small-image {
           width: 150px !important;
         }
