@@ -75,7 +75,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
         align-items: flex-end;
         transition: 0.4s ease-out;
         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-        cursor: pointer;
+        cursor: context-menu;
       }
 
       .card:hover {
