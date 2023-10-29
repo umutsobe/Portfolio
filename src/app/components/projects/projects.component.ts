@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
                 <h4 class="text-center" style="color: aqua;">E Commerce App</h4>
               </a>
               <div class="d-flex justify-content-center">
-                <img class="e-commerce-image rounded-3" style="width: 500px;" src="/assets/e_commerce.jpg" />
+                <img class="e-commerce-image rounded-3" style="width: 500px;" [defaultImage]="defaultImage" [lazyLoad]="e_commerce" />
               </div>
               <div class="d-flex justify-content-sm-start flex-wrap mt-3 w-100">
                 <ul class="p-4">
@@ -68,7 +68,7 @@ import { Component } from '@angular/core';
             <div class="d-flex flex-column justify-content-center mb-4">
               <h5 class="text-white text-center my-2">Music Player</h5>
               <div class="d-flex justify-content-between align-items-center">
-                <img class="rounded-3 small-image" style="width: 220px;" src="/assets/music.jpg" alt="" />
+                <img class="rounded-3 small-image" style="width: 220px;" [defaultImage]="defaultImage" [lazyLoad]="music" />
                 <ul>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -80,7 +80,7 @@ import { Component } from '@angular/core';
               <h5 class="text-white text-center my-2">Quiz App</h5>
 
               <div class="d-flex justify-content-between align-items-center">
-                <img class="rounded-3 small-image" style="width: 220px;" src="/assets/quiz.png" alt="" />
+                <img class="rounded-3 small-image" style="width: 220px;" [defaultImage]="defaultImage" [lazyLoad]="quiz" />
                 <ul>
                   <li>HTML</li>
                   <li>CSS</li>
@@ -127,4 +127,9 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class ProjectsComponent {}
+export class ProjectsComponent {
+  defaultImage = '/assets/dark-preload.png';
+  e_commerce = '/assets/e_commerce.jpg';
+  music = '/assets/music.jpg';
+  quiz = '/assets/quiz.png';
+}

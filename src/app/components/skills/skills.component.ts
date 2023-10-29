@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -9,49 +9,49 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
       <div class="d-flex justify-content-between align-items-center">
         <div class="wrapper flex-wrap">
           <div class="card">
-            <img src="/assets/aspnet.png" />
+            <img [defaultImage]="default" [lazyLoad]="aspnet" />
           </div>
           <div class="card">
-            <img src="/assets/angular.jpg" style="object-fit: ;" />
+            <img [defaultImage]="default" [lazyLoad]="angular" />
           </div>
           <div class="card">
-            <img src="/assets/csharp.png" />
+            <img [defaultImage]="default" [lazyLoad]="csharp" />
           </div>
           <div class="card">
-            <img src="/assets/docker.png" />
+            <img [defaultImage]="default" [lazyLoad]="docker" />
           </div>
           <div class="card">
-            <img src="/assets/azure.png" />
+            <img [defaultImage]="default" [lazyLoad]="azure" />
           </div>
           <div class="card">
-            <img src="/assets/efcore.png" />
+            <img [defaultImage]="default" [lazyLoad]="efcore" />
           </div>
           <div class="card">
-            <img src="/assets/git.jpg" />
+            <img [defaultImage]="default" [lazyLoad]="git" />
           </div>
           <div class="card">
-            <img src="/assets/jenkins.jpg" />
+            <img [defaultImage]="default" [lazyLoad]="jenkins" />
           </div>
           <div class="card">
-            <img src="/assets/linux.jpg" />
+            <img [defaultImage]="default" [lazyLoad]="linux" />
           </div>
           <div class="card">
-            <img src="/assets/typescript.png" />
+            <img [defaultImage]="default" [lazyLoad]="typescript" />
           </div>
           <div class="card">
-            <img src="/assets/js.png" />
+            <img [defaultImage]="default" [lazyLoad]="js" />
           </div>
           <div class="card">
-            <img src="/assets/bootstrap.jpg" />
+            <img [defaultImage]="default" [lazyLoad]="bootstrap" />
           </div>
           <div class="card">
-            <img src="/assets/prime-ng.png" />
+            <img [defaultImage]="default" [lazyLoad]="primeng" />
           </div>
           <div class="card">
-            <img src="/assets/css.png" />
+            <img [defaultImage]="default" [lazyLoad]="css" />
           </div>
           <div class="card">
-            <img src="/assets/html.png" />
+            <img [defaultImage]="default" [lazyLoad]="html" />
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
       }
 
       .card:before {
-        content: '';
+        content: ;
         position: absolute;
         top: 0;
         left: 0;
@@ -122,4 +122,22 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
     `,
   ],
 })
-export class SkillsComponent {}
+export class SkillsComponent {
+  default = '/assets/dark-preload.png';
+
+  html = '/assets/html.png';
+  aspnet = '/assets/aspnet.png';
+  angular = '/assets/angular.jpg';
+  csharp = '/assets/csharp.png';
+  docker = '/assets/docker.png';
+  azure = '/assets/azure.png';
+  efcore = '/assets/efcore.png';
+  git = '/assets/git.jpg';
+  jenkins = '/assets/jenkins.jpg';
+  linux = '/assets/linux.jpg';
+  typescript = '/assets/typescript.png';
+  js = '/assets/js.png';
+  bootstrap = '/assets/bootstrap.jpg';
+  primeng = '/assets/prime-ng.png';
+  css = '/assets/css.png';
+}

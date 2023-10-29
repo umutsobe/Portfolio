@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-    <div class="p-2" style="height: 90vh !important; background-color: #090f21;">
+    <div class="p-2" style="height: 99vh !important; background-color: #090f21;">
       <div class="h-75 d-flex flex-column justify-content-center align-items-center ">
         <div class="typewriter mx-auto">
           <div class="welcome-text user-select-none text-white">Hello. I'm Umut Sobe. Welcome!</div>
