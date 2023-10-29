@@ -45,6 +45,9 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
             <img src="/assets/bootstrap.jpg" />
           </div>
           <div class="card">
+            <img src="/assets/prime-ng.png" />
+          </div>
+          <div class="card">
             <img src="/assets/css.png" />
           </div>
           <div class="card">
@@ -63,8 +66,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
       }
 
       .card {
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
         border-radius: 15px;
         padding: 1.5rem;
         margin-bottom: 25px;
@@ -109,6 +112,12 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
         top: 0;
         left: 0;
         border-radius: 15px;
+      }
+      @media (max-width: 600px) {
+        .card {
+          width: 90px;
+          height: 90px;
+        }
       }
     `,
   ],
